@@ -1,0 +1,14 @@
+rabbitmq-service install  安装
+rabbitmq-service start 启动
+rabbitmq-service.bat stop 关闭
+rabbitmq-service.bat remove 卸载服务
+
+
+
+1.根据项目要求，查询了解了rabbitMQ的大体内容和用途。
+2.学习了rabbitmq的三种消息（exchange）匹配方式，以及它的使用方法
+
+3.安装了CRT软件，并进行了简单指令的操作，下载镜像
+
+4.了解了分发方式的学习（循环分发，公平分发，主题分发）
+5.进行了简单的Java编程rabbitMQ实现消息的收发

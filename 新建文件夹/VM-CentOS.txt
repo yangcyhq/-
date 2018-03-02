@@ -1,0 +1,5 @@
+1.Cent-OS安装找不到网卡
+由于Vmware虚拟网卡和linux兼容问题导致驱动无法正常安装，默认的网卡类型不兼容
+找到我们的Vmware虚拟机文件夹，将VMware 虚拟机配置 (.vmx)，追加一条设置我们网卡类型ethernet0.virtualDev = "e1000"
+原因
+VMware都在虚拟客户机中提供的是古老的AMD PCNet10/100Mbps虚拟网卡，后来，VMware通过一种类似部分虚拟化的vmxnet优化虚拟网卡的方式提供了10/100 /1000Mbps性能，无疑性能更好。现在，VMware ESX Server已经可以提供基于Intel E1000的千兆虚拟网卡，从兼容性和性能的角度来看，E1000都是更好的选择。但似乎，在ESX/ESXi 3.5的图形界面中，都无法直接选择该网卡类型，需要手动配置。
